@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Currículum - Ruth Sainz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- RESET Y BASES --- */
+        * { box-sizing: border-box; }
+        
+        body {
+            background: #e0e5ec; /* Fondo gris suave para la ventana */
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            color: #333;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL (LA HOJA) --- */
+        .hoja-cv {
+            width: 900px;
+            max-width: 95%;
+            background: white;
+            display: flex;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra elegante */
+        }
+
+        /* --- COLUMNA IZQUIERDA (SIDEBAR) --- */
+        #izquierda {
+            flex: 1.2;
+            background: #2e2e3e; /* Gris oscuro azulado para contraste */
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* FOTO */
+        .marco-foto {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px auto;
+            border-radius: 50%; /* Foto redonda */
+            overflow: hidden;
+            border: 4px solid #8e44ad; /* Borde morado vibrante */
+        }
+
+        .marco-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* AÑADE ESTA LÍNEA Y JUEGA CON EL SEGUNDO NÚMERO: */
+            object-position: 70% 5%; 
+        }
+
+        /* SECCIONES IZQUIERDA */
+        #izquierda h3 {
+            background: transparent;
+            color: #d1bce3; /* Morado claro */
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        #izquierda ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        #izquierda li {
+            margin-bottom: 15px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #izquierda a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        #izquierda a:hover {
+            color: #8e44ad;
+        }
+
+        #izquierda i {
+            color: #8e44ad; /* Color de los iconos */
+            width: 20px;
+        }
+
+        /* --- COLUMNA DERECHA (CONTENIDO) --- */
+        #derecha {
+            flex: 3;
+            padding: 40px;
+            background: #ffffff;
+        }
+
+        /* ENCABEZADO */
+        #derecha h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
+            color: #2c3e50;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        #derecha h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: #8e44ad; /* Morado acento */
+            margin-top: 5px;
+            margin-bottom: 25px;
+            font-size: 22px;
+            border: none;
+            padding: 0;
+        }
+
+        .intro {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 15px;
+            border-left: 4px solid #e0e0e0;
+            padding-left: 15px;
+        }
+
+        /* TITULOS DE SECCIÓN DERECHA */
+        #derecha h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            border-bottom: 2px solid #8e44ad;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            margin-top: 0;
+            background: none; /* Quitamos fondo rosa */
+            letter-spacing: 1px;
+        }
+
+        /* ARTÍCULOS DE EXPERIENCIA/FORMACIÓN */
+        #derecha article {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        #derecha h4 {
+            font-size: 16px;
+            color: #333;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        #derecha h5 {
+            color: #8e44ad;
+            font-weight: 600;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #derecha p {
+            color: #666;
+            margin-top: 5px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            .hoja-cv { flex-direction: column; }
+            #izquierda { padding: 20px; }
+            #derecha { padding: 20px; }
+            #derecha h1 { font-size: 32px; }
+            .item-header { flex-direction: column; gap: 5px;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hoja-cv">
+        <section id="izquierda">
+            <div class="marco-foto">
+                <img src="Ruth_800.jpg" alt="Foto de Ruth Sainz">
+            </div>
+
+            <article>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 634 480 989</li>
+                    <li><i class="fas fa-envelope"></i> rutsaisan@gmail.com</li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/rutsaisan" target="_blank">github.com/rutsaisan</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mislata, Valencia</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Skills</h3>
+                <ul>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fas fa-database"></i> MySQL</li>
+                    <li><i class="fab fa-html5"></i> HTML / CSS</li>
+                    <li><i class="fas fa-users"></i> Liderazgo</li>
+                </ul>
+            </article>  
+
+            <article>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li><strong>Castellano:</strong> Nativo</li>
+                    <li><strong>Valenciano:</strong> Medio</li>
+                    <li><strong>Inglés:</strong> Medio/Alto</li>
+                </ul>
+            </article>  
+        </section>
+
+        <section id="derecha">
+            <header>
+                <h1>Ruth Sainz</h1>
+                <h2>Estudiante de DAM</h2>
+            </header>
+            
+            <p class="intro">
+                Estudiante apasionada por el desarrollo de videojuegos y aplicaciones multiplataforma. Mis habilidades incluyen el liderazgo y la organización de equipos, logradas a través de mi amplia experiencia coordinando grupos scouts. Busco aplicar mis conocimientos técnicos y soft skills en proyectos desafiantes.
+            </p>
+
+            <div id="experiencia">
+                <h3>Experiencia Profesional</h3>
+
+                <article>
+                    <div class="item-header">
+                        <h4>Guía de proyectos y grupos</h4>
+                        <h5>2017 - Presente</h5>
+                    </div>
+                    <p><strong>Grupo Scout</strong> | Liderazgo y voluntariado</p>
+                    <p>Desde los 11 años he participado activamente, progresando hasta el puesto de guía. Lideré mi patrulla encargándome de la seguridad y bienestar del equipo. Actualmente, como Rover, realizo servicio comunitario, colaboro en la organización logística de eventos y gestiono iniciativas ciudadanas.</p>
+                </article>
+
+                <article>
+                    <div class="item-header">
+                        <h4>Atención al cliente</h4>
+                        <h5>Veranos</h5>
+                    </div>
+                    <p><strong>MARISOL LENCERIA Y MODA INFANTIL</strong></p>
+                    <p>Gestión de inventario y atención directa al cliente en tienda de moda.</p>
+                </article>
+
+                <article>
+                    <div class="item-header">
+                        <h4>Coordinación de eventos</h4>
+                        <h5>Proyectos Scout</h5>
+                    </div>
+                    <p>Responsable principal de logística, planificación de horarios y coordinación de recursos materiales para actividades grupales.</p>
+                </article>
+            </div>
+
+            <div id="formacion">
+                <h3>Formación</h3>
+                
+                <article>
+                    <div class="item-header">
+                        <h4>CFGS Desarrollo de Aplicaciones Multiplataforma</h4>
+                        <h5>2025 - 2026 (En curso)</h5>
+                    </div>
+                    <p>CEAC FP, Valencia (Burjassot)</p>
+                </article>
+
+                <article>
+                    <div class="item-header">
+                        <h4>Bachillerato Científico-Tecnológico</h4>
+                        <h5>2024 - 2025</h5>
+                    </div>
+                    <p>IES Molí del Sol, Mislata</p>
+                </article>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+</html>
